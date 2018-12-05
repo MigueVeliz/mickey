@@ -1,8 +1,7 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
-// import Paper from '@material-ui/core/Paper';
-// import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
+import { Link } from "react-router-dom";
+
 
 const styles = theme => ({
     root: {
@@ -18,23 +17,26 @@ const styles = theme => ({
         right: 0,
         bottom: 0,
         left: 0,
-        width: 200,
+        // width: 200,
         height: 100,
+    },
+    titleStyle: {
+        fontSize: 30,
     }
 });
 
-const Main = (props) => {
+const Templates = (props) => {
 
     const { classes } = props;
 
     return (
         <div className={classes.root}>
             <div className={classes.buttonDiv}>
-                <Button variant="contained" color="primary">Create Your App</Button>
+                <h3 className={classes.titleStyle}>Templates</h3>
             </div>
         </div>
     );
 }
 
 
-export default withStyles(styles)(Main);
+export default withStyles(styles)(Templates);

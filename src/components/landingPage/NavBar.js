@@ -7,6 +7,8 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import { Link } from "react-router-dom";
+
 
 const styles = {
   root: {
@@ -35,7 +37,11 @@ const NavBar = (props) => {
           </Typography>
           <Button color="inherit">Pricing</Button>
           <Button color="inherit">Sign In</Button>
-          <Button onClick={ () => console.log("hehehe") } variant="contained" color="secondary">Create Your App</Button>
+
+          <Link to="/login">
+            <Button variant="contained" color="secondary">Create Your App</Button>
+          </Link>
+
         </Toolbar>
       </AppBar>
     </div>
