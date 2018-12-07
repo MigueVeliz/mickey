@@ -10,9 +10,14 @@ import MenuIcon from '@material-ui/icons/Menu';
 import { Link } from "react-router-dom";
 
 
+
 const styles = {
   root: {
     flexGrow: 1,
+  },
+  navBarStyle: {
+    border: 0,
+    background: "#283044"
   },
   grow: {
     flexGrow: 1,
@@ -21,13 +26,17 @@ const styles = {
     marginLeft: -12,
     marginRight: 20,
   },
+  linkStyle: {
+    textDecoration: 'none',
+    color: 'white'
+}
 };
 
 const NavBar = (props) => {
   const { classes } = props;
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" className={classes.navBarStyle} >
         <Toolbar>
           <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
             <MenuIcon />
@@ -38,7 +47,7 @@ const NavBar = (props) => {
           <Button color="inherit">Pricing</Button>
           <Button color="inherit">Sign In</Button>
 
-          <Link to="/login">
+          <Link to="/templates" className={classes.linkStyle} >
             <Button variant="contained" color="secondary">Create Your App</Button>
           </Link>
 

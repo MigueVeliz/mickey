@@ -25,6 +25,10 @@ const styles = theme => ({
     },
     titleStyle: {
         fontSize: 30,
+    },
+    linkStyle: {
+        textDecoration: 'none',
+        // color: 'white'
     }
 });
 
@@ -37,7 +41,7 @@ const Main = (props) => {
             <div className={classes.buttonDiv}>
                 <h3 className={classes.titleStyle}>Create exceptional apps - faster!</h3>
 
-                <Link to="/login"><Button variant="contained" color="primary">Create Your App</Button></Link>
+                <Link to="/templates" className={classes.linkStyle} ><Button variant="contained" color="primary">Create Your App</Button></Link>
 
             </div>
         </div>
