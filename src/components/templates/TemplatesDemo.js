@@ -54,8 +54,8 @@ class TemplatesDemo extends React.Component {
     const { spacing } = this.state;
 
     return (
-      <Grid container className={classes.root} spacing={16}>
-        <Grid item xs={12} className={classes.innerContainer} >
+      <Grid container justify="center" className={classes.root} spacing={16}>
+        <Grid item xs={10}  className={classes.innerContainer} >
             <Grid container justify="center" spacing={40}  >
                 <Grid item >
                     <Link to="/login" className={classes.linkStyle}>

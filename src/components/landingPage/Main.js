@@ -9,9 +9,9 @@ import { Link } from "react-router-dom";
 const styles = theme => ({
     root: {
     //   flex: 5,
-    //   backgroundColor: 'salmon',
+      background: '#E7F0FF',
       textAlign: 'center',
-    //   height: 900,
+      height: '100vh'
     },
     buttonDiv: {
         position: "absolute",
@@ -39,6 +39,9 @@ const Main = (props) => {
     return (
         <div className={classes.root}>
             <div className={classes.buttonDiv}>
+
+                
+
                 <h3 className={classes.titleStyle}>Create exceptional apps - faster!</h3>
 
                 <Link to="/templates" className={classes.linkStyle} ><Button variant="contained" color="primary">Create Your App</Button></Link>

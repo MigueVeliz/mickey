@@ -82,7 +82,7 @@ const Templates = (props) => {
             </Typography>
 
             <Typography color="textSecondary" align="center" variant="h6" className={classes.infoText} >
-                Choose a template based on the features, or just the looks. Customize everything later
+                Choose a template based on the features, or just the looks.
             </Typography>
 
             <Typography color="textSecondary" align="center" variant="h6"  >
