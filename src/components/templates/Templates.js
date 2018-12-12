@@ -65,7 +65,7 @@ const Templates = (props) => {
 
     return (
         <div className={classes.root}>
-            <AppBar position="static"  className={classes.NavColor}>
+            <AppBar position="sticky"  className={classes.NavColor}>
                 <Toolbar className={classes.topToolBar}>
                     <Typography align="center" variant="h6" className={classes.navTitle}>
                         Create a new app

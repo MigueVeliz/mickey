@@ -57,11 +57,7 @@ class Container extends React.Component {
         <div>
             <AppBar position="static" className={classes.navBarStyle} >
                     <Toolbar>
-                        <Typography variant="h6" color="inherit" className={classes.grow}>
-                            <Link to="/" className={classes.linkStyle}>
-                                MICKEY
-                            </Link>
-                        </Typography>
+                        <Button component={Link} to="/" color="inherit">MICKEY</Button>
                         <Button color="inherit">Pricing</Button>
                         <Button color="inherit">Blog</Button>
                     </Toolbar>

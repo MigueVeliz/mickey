@@ -47,9 +47,8 @@ const NavBar = (props) => {
           <Button color="inherit">Pricing</Button>
           <Button color="inherit">Sign In</Button>
 
-          <Link to="/templates" className={classes.linkStyle} >
-            <Button variant="contained" color="secondary">Create Your App</Button>
-          </Link>
+          <Button component={Link} to="/templates" variant="contained" color="secondary">Create Your App</Button>
+
 
         </Toolbar>
       </AppBar>

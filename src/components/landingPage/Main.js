@@ -40,11 +40,9 @@ const Main = (props) => {
         <div className={classes.root}>
             <div className={classes.buttonDiv}>
 
-                
-
                 <h3 className={classes.titleStyle}>Create exceptional apps - faster!</h3>
 
-                <Link to="/templates" className={classes.linkStyle} ><Button variant="contained" color="primary">Create Your App</Button></Link>
+                <Button component={Link} to="templates" variant="contained" color="primary">Create Your App</Button>
 
             </div>
         </div>
