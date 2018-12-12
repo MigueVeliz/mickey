@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
-import MenuItem from '@material-ui/core/MenuItem';
 import TextField from '@material-ui/core/TextField';
+import { Link } from "react-router-dom";
 import Button from '@material-ui/core/Button';
 
 const styles = theme => ({
@@ -82,7 +81,9 @@ class LogInForm extends React.Component {
 
                 </form>
 
-                <Button 
+                <Button
+                    component={Link}
+                    to="Dashboard"  
                     variant="contained" 
                     size="large" 
                     color="secondary" 

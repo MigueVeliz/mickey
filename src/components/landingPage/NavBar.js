@@ -9,8 +9,6 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import { Link } from "react-router-dom";
 
-
-
 const styles = {
   root: {
     flexGrow: 1,
@@ -36,7 +34,7 @@ const NavBar = (props) => {
   const { classes } = props;
   return (
     <div className={classes.root}>
-      <AppBar position="static" className={classes.navBarStyle} >
+      <AppBar position="sticky" className={classes.navBarStyle} >
         <Toolbar>
           <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
             <MenuIcon />
@@ -45,7 +43,7 @@ const NavBar = (props) => {
             MICKEY
           </Typography>
           <Button color="inherit">Pricing</Button>
-          <Button color="inherit">Sign In</Button>
+          <Button component={Link} to="login" color="inherit">Sign In</Button>
 
           <Button component={Link} to="/templates" variant="contained" color="secondary">Create Your App</Button>
 

@@ -4,26 +4,14 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
 import { Link } from "react-router-dom";
-
-
-
 import Card from './Card';
 
 const styles = theme => ({
   root: {
     flexGrow: 1,
     marginTop: 50,
-    // width: 1000,
-    // background: 'salmon',
-    // align: 'center'
-  },
-  innerContainer: {
-    // background: 'blue'
   },
   singleGrid: {
-    // height: 400,
-    // width: 200,
-    // background: 'salmon'
   },
   paper: {
     height: 400,
@@ -51,7 +39,6 @@ class TemplatesDemo extends React.Component {
 
   render() {
     const { classes } = this.props;
-    const { spacing } = this.state;
 
     return (
       <Grid container justify="center" className={classes.root} spacing={16}>
