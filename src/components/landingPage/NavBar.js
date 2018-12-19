@@ -47,7 +47,6 @@ const NavBar = (props) => {
 
           <Button component={Link} to="/templates" variant="contained" color="secondary">Create Your App</Button>
 
-
         </Toolbar>
       </AppBar>
     </div>

@@ -6,6 +6,7 @@ import LandingPage from './components/landingPage/LandingPage';
 import Templates from './components/templates/Templates';
 import Container from './components/login/Container';
 import Dashboard from './components/Dashboard/Dashboard';
+import Editor from './components/Editor/Main';
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
           <Route path="/templates" component={Templates} />
           <Route path="/login" component={Container} />
           <Route path="/dashboard" component={Dashboard} />
+          <Route path="/editor" component={Editor} />
         </div>
       </Router>
     );
