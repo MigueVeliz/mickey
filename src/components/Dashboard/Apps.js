@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
+import { Link } from "react-router-dom";
 import { Typography } from '@material-ui/core';
 
 const styles = theme => ({
@@ -57,23 +58,29 @@ class Apps extends React.Component {
                     <Grid container justify="center" spacing={40}  >
                         <Grid item >
                             <Paper className={classes.root} elevation={1}>
-                                <Typography variant="h5" component="h3">
-                                    Create new app
-                                </Typography>
+                                <Link to="/editor" className={classes.linkStyle}>
+                                    <Typography variant="h5" component="h3">
+                                        Create new app
+                                    </Typography>
+                                </Link>
                             </Paper>
                         </Grid>
                         <Grid item >
                             <Paper className={classes.root} elevation={1}>
-                                <Typography variant="h5" component="h3">
-                                    Travel App
-                                </Typography>
+                                <Link to="/editor" className={classes.linkStyle}>
+                                    <Typography variant="h5" component="h3">
+                                        Travel App
+                                    </Typography>
+                                </Link>
                             </Paper>
                         </Grid>
                         <Grid item >
                             <Paper className={classes.root} elevation={1}>
-                                <Typography variant="h5" component="h3">
-                                    News App
-                                </Typography>
+                                <Link to="/editor" className={classes.linkStyle}>
+                                    <Typography variant="h5" component="h3">
+                                        News App
+                                    </Typography>
+                                </Link>
                             </Paper>
                         </Grid>
 

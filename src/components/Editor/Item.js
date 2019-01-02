@@ -53,19 +53,26 @@ class Item extends Component {
     return (
       connectDragSource(
         <div style={{
-          width: '80%',
+          // width: '80%',
           opacity: isDragging ? 0.5 : 1,
           fontSize: 25,
           fontWeight: 'bold',
           cursor: 'move',
-          display: 'block',
+          display: 'inline-block',
           paddingTop: 3,
           paddingRight: 6,
           paddingBottom: 3,
           paddingLeft: 6,
-          backgroundColor: '#D8E4FF'
+          marginTop: 4,
+          marginRight: 4,
+          backgroundColor: '#D8E4FF',
+
+          
         }}>
           { this.props.text } with ID: { this.props.id }
+
+          { this.props.parentContainer === 'device' ? <button onClick={ () => this.props.delete( this.props.id ) }>x</button> : null }
+
           {/* {isDragging && ' (and I am being dragged now)'} */}
         </div>
       )

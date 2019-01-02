@@ -25,6 +25,9 @@ const styles = theme => ({
     devicePanel: {
         height: 440,
         width: 300,
+        borderRadius: 23,
+        borderWidth: 4,
+        borderColor: '#d6d7da',
     },
     control: {
         padding: theme.spacing.unit * 2,
@@ -77,6 +80,20 @@ class Editor extends Component {
         })
     }
 
+    delete(id) {
+        console.log("deleting div with ID: " + id );
+
+        let updatedDivs = [];
+        updatedDivs = this.state.divs.filter( div => {
+            return div.id !== id
+        });
+        
+        this.setState({
+            divs: updatedDivs
+        })
+
+    }
+
 
     render() {
         const { classes } = this.props;
@@ -92,6 +109,7 @@ class Editor extends Component {
                                             div.parentContainer === "components" ? 
                                             <Item
                                                 // fireChange={ () => this.fireChange }
+                                                delete={ this.delete.bind(this) }
                                                 id={div.id}
                                                 text={div.text}
                                                 parentContainer={div.parentContainer}
@@ -116,7 +134,8 @@ class Editor extends Component {
                                         this.state.divs.map( (div, index)  => {
                                             return ( 
                                                 div.parentContainer === "device" ? 
-                                                <Item 
+                                                <Item
+                                                    delete={ this.delete.bind(this) }
                                                     id={div.id}
                                                     text={div.text}
                                                     parentContainer={div.parentContainer}
